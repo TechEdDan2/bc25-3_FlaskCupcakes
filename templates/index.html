@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text-center my-5">
+    <h1 class="display-4 text-primary">Codelicious Confectionary</h1>
+    <p class="lead text-secondary">Create your dream cupcake!</p>
+</div>
+
+<div class="container bg-light p-5 rounded shadow">
+    <h2 class="text-center text-success mb-4">Cupcake Form</h2>
+
+    <form id="cupcake_form">
+        <div class="mb-3">
+            <label class="form-label fw-bold text-primary" for="form_flavor">Flavor:</label>
+            <input type="text" class="form-control border-primary" id="form_flavor" placeholder="e.g., Chocolate">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold text-primary" for="form_size">Size:</label>
+            <select class="form-select border-primary" id="form_size">
+                <option value="mini">Mini</option>
+                <option value="standard">Standard</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold text-primary" for="form_rating">Rating:</label>
+            <input type="text" class="form-control border-primary" id="form_rating" placeholder="e.g., 5">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold text-primary" for="form_image">Image (URL):</label>
+            <input type="text" class="form-control border-primary" id="form_image"
+                placeholder="e.g., https://example.com/cupcake.jpg">
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-lg px-5" id="add_btn">Add Cupcake</button>
+        </div>
+    </form>
+
+    <ul id="cc_list"></ul>
+
+</div>
+
+{% endblock %}

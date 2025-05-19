@@ -11,7 +11,7 @@
                 <h3>{{ cake.flavor }}</h3>
                 <img src="{{ cake.image }}" alt="{{ cake.flavor }}" class="img-fluid rounded">
 
-                <button id="delete_btn" data-id="{{ cake.id}}" class="btn btn-warning btn-lg px-5">Delete</button>
+                <button id="delete_btn" data-id="{{cake.id}}" class="btn btn-warning btn-lg px-5">Delete</button>
             </div>
         </div>
         {% endfor %}

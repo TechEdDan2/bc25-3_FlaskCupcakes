@@ -42,5 +42,26 @@ $(document).ready(function () {
         $("#cupcake_form").trigger("reset");
     });
 
+    /**
+     * Sends a DELETE Request to the server 
+     * Triggered by the delete button 
+     * ID delete_btn
+     */
+
+    $(document).on('click', '#delete_btn', async function () {
+        const id = $(this).data('id');
+
+        try {
+            //Delete Item Endpoint
+            await axios.delete(`/api/cupcakes/${id}`);
+            //Remove the item from the DOM 
+            $(this).closest('.text-center').remove();
+
+        } catch (error) {
+            console.error("Error deleteing element:", error);
+            alert("Failed to delete cupcake. Try Again")
+        }
+    });
+
 });
 
